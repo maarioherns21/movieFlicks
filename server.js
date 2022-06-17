@@ -10,6 +10,8 @@ const moviesRoutes = require('./routes/movies');
 
 var app = express();
 
+// connect to the MongoDB with mongoose
+require("./config/database");
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
