@@ -6,7 +6,7 @@ const moviesCtrl = require("../controllers/movies")
 router.get("/", moviesCtrl.index);
 
 //get /movies/new movie
-router.get("/new", moviesCtrl.new);
+router.get("/add", moviesCtrl.new);
 
 //movies/21332312(id = params)
 router.get("/:id", moviesCtrl.show);

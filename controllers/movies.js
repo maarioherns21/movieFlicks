@@ -14,7 +14,7 @@ function show(req, res) {
 }
 
 function newMovie(req, res) {
-  res.render("movies/new", { title: "Add Movie" });
+  res.render("movies/add", { title: "Add Movie" });
 }
 
 function index(req, res) {
@@ -29,7 +29,7 @@ function index(req, res) {
 function create(req, res) {
   const movie = new Movie(req.body);
   movie.save(function (err) {
-    if (err) return res.redirect("/movies/new");
+    if (err) return res.redirect("/movies/add");
     res.redirect(`/movies/${movie._id}`);
   });
 }
