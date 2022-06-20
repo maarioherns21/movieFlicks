@@ -1,16 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1><%= movie.movieName %> </h1>
-    <image src="<%= movie.url %> " max-width= "500px" Max-height="600">
-    <p><%= movie.runningTime %> </p>
-    <p><%= movie.movieInfo %> </p>
-    <p><%= movie.movieCast %> </p>
-</body>
-</html>
+<%- include('../partials/header') %> 
+    	<div class="container px-4 ">
+            <br><br>
+			<div class="container-fliud">
+				<div class="wrapper row">
+					<div class="preview col-md-6">	
+						<div class="preview-pic tab-content">
+						  <div class="tab-pane active"> <image src="<%= movie.url %> " max-width= "400px" Max-height="500"></div>
+						</div>			
+					</div>
+					<div class="details col-md-6">
+                        <br>
+						<h2 class="product-title"><%= movie.movieName %></h2>
+                        <p class="product-description"><%= movie.movieInfo %></p>
+						<h4 class="price">time: <span><%= movie.runningTime %>hrs </span></h4>
+                        <h5 class="sizes">Year:<h6><span><%= movie.movieYear %></span></h6></h5>
+                        <h5 class="sizes">Studio:<h6><span><%= movie.author %> </span></h6></h5>
+						<h5 class="sizes">actors:<h6><span><%= movie.movieCast %></span></h6>
+						</h5>
+					</div>
+				</div>
+			</div>
+	</div>
+    <br><br>
+<%- include('../partials/footer') %> 

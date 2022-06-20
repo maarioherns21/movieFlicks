@@ -8,6 +8,8 @@ const movieSchema = new Schema({
     movieInfo: String,
     movieCast: String,
     url: {type: String},
+    movieYear: {type: Number , default: false},
+    author: {type: String, default:false},
 },
 {timestamps: true}
 )
